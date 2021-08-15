@@ -14,8 +14,10 @@ styles.css
 content.html  layout.html
 
 
+Clone repo:
+# git clone https://github.com/abdelhamid1985/python_microservice.git
 
-To launch the app more to the app root and execute:
+To launch the app more to the app root (python_microservice) and execute:
 export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run -p80
