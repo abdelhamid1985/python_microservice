@@ -1,0 +1,27 @@
+<!-- layout.html -->
+<html>
+    <head>
+        <title>Github Languages Statstics</title>
+        <link rel="stylesheet" type="text/css"
+              href="/assets/awesome-style.min.css"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    {% for page in pages %}
+                    <li>
+                        <a href="{{ page.href }}">{{ page.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <main>
+                {% include 'content.html' %}
+            </main>
+            <footer>
+                <div class="left">2017</div>
+            </footer>
+        </div>
+    </body>
+</html>
