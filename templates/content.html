@@ -3,8 +3,22 @@
     <h3>{{ heading|capitalize }}</h3>
     <div>
         {{ body_text|safe }}
-    </div><br /><br />
+    </div>
+
+    <br /><br />
+
     <div>
-        {{ GhitRepos.items }}
+    <ul>
+        {% for item in items %}
+
+            <li>
+                <ul>
+                <li>{{ item['url'] }}</li>
+                <li>{{ item['language'] }}</li>
+                </ul>
+            </li>
+
+        {% endfor %}
+    </ul>
     </div>
 </div>
