@@ -8,17 +8,32 @@
     <br /><br />
 
     <div>
-    <ul>
-        {% for item in items %}
 
-            <li>
-                <ul>
-                <li>{{ item['url'] }}</li>
-                <li>{{ item['language'] }}</li>
-                </ul>
-            </li>
+	<table width='100%'>
+            <thead>
+                <tr><th>Language</th><th>Count Repos</th><th>Repos List</th></tr>
+            </thead>
+            <tbody>
+	
+            {% for lang,stats in langs.items() %}
+	        <tr>
+		    
+		    <td>{{ lang }}</td>
+                    <td>{{ stats['count'] }}</td>
+                    <td>
+			<ul>
+			{% for repo in stats['repos'] %}
+			    <li>{{ repo }}</li>	
+			{% endfor %}
+			</ul>
+                    </td>
 
-        {% endfor %}
-    </ul>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+
     </div>
 </div>
